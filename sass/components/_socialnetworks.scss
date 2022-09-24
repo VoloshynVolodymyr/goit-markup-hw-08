@@ -1,0 +1,40 @@
+.socialnetworks {
+  @extend %flexcenter;
+  & > li:not(:last-child) {
+    margin-right: 10px;
+  }
+  &__icon {
+    fill: $link-color;
+    width: 20px;
+    height: 20px;
+    @include transition(fill);
+    &--lightcolor {
+      fill: $white-color;
+      @include transition(background-color);
+    }
+  }
+  &__container {
+    @extend %flexcenter;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.1);
+    @include transition(background-color);
+    &:not(:first-child) {
+      margin-left: 10px;
+    }
+    &:hover {
+      background-color: $accent-color;
+      & .socialnetworks__icon {
+        fill: $white-color;
+      }
+    }
+    &:focus {
+      background-color: $accent-color;
+      & .socialnetworks__icon {
+        fill: $white-color;
+      }
+    }
+  }
+}

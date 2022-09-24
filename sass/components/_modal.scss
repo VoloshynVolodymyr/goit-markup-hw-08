@@ -1,0 +1,197 @@
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  @include transition(transform);
+  @include transition(opacity);
+  opacity: 1;
+  background: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  min-width: 528px;
+  min-height: 581px;
+  padding: 40px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(1.2);
+  opacity: 0;
+}
+
+.close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  transform: translate(-8px, 8px);
+  &:hover .close__x,
+  &:focus .close__x {
+    fill: $accent-color;
+  }
+  &:hover .close__ellipse,
+  &:focus .close__ellipse {
+    border: 1px solid $accent-color;
+  }
+  &__ellipse {
+    position: absolute;
+    top: 0;
+    right: 0;
+    fill: $white-color;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    @include transition(border);
+  }
+  &__x {
+    position: absolute;
+    top: 0;
+    right: 0;
+    fill: $black-color;
+    transform: translate(-9px, 9px);
+    @include transition(fill);
+  }
+}
+
+.modalform {
+  width: 100%;
+  @extend %flexcenter;
+  flex-direction: column;
+  &__header {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    letter-spacing: 0.03em;
+    color: $dark-color-text;
+  }
+  &__box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    margin-top: 12px;
+    margin-bottom: 10px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+    & label {
+      margin-bottom: 6px;
+    }
+  }
+  &__icon {
+    position: absolute;
+    top: 50%;
+    margin-left: 12px;
+    @include transition(fill);
+  }
+  &__input {
+    width: 448px;
+    height: 40px;
+    padding-left: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include transition(border);
+    resize: none;
+    &:focus {
+      border: 1px solid $accent-color;
+      outline: none;
+      & + .modalform__icon {
+        fill: $accent-color;
+      }
+    }
+  }
+  &__textarea {
+    width: 448px;
+    height: 120px;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    @include transition(border);
+    resize: none;
+    &:focus {
+      border: 1px solid $accent-color;
+      outline: none;
+      & + .modalform__icon {
+        fill: $accent-color;
+      }
+    }
+  }
+  &__textagree {
+    position: relative;
+    margin-left: 8px;
+    line-height: 1.71;
+  }
+  &__agreement {
+    position: relative;
+    display: flex;
+  }
+  &__specialtext {
+    color: $accent-color;
+    text-decoration-line: underline;
+    cursor: pointer;
+  }
+  &__custombox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+      &::before {
+        content: '';
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-width: 2px;
+        border-style: solid;
+        border-color: $dark-color-text;
+        border-radius: 3px;
+        background-color: $white-color;
+        @include transition(border-color);
+        @include transition(background-color);
+      }
+    }
+  }
+}
+
+.modalform__custombox:checked + label::before,
+.modalform__custombox:focus + label::before {
+  border-color: $accent-color;
+  background-color: $accent-color;
+  background-image: url(../images/v.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 11px 8px;
+}
+
+/* стилі при наведенні курсору checkbox */
+.modalform__custombox:not(:disabled):not(:checked) + label:hover::before {
+  border-color: $accent-color;
+}
+/* стилі для активного стану чекбоксу (при натисненні на нього) */
+.modalform__custombox:not(:disabled):active + label::before {
+  background-color: $white-color;
+  border-color: $accent-color;
+}
+/* стилі для чекбоксу, що знаходиться в фокусі */
+.modalform__custombox:focus + label::before {
+  border-color: $accent-color;
+}
+/* стилі для чекбоксу, що знаходиться в фокусі и і не знаходиться в стані checked */
+.modalform__custombox:focus:not(:checked) + label::before {
+  border-color: $accent-color;
+  background-color: $white-color;
+}
+
+/* стили для чекбоксу, що знаходиться в стані disabled */
+.modalform__custombox:disabled + label::before {
+  background-color: $white-color;
+  border-color: $dark-color-text;
+}

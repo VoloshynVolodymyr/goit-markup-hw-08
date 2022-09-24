@@ -1,0 +1,92 @@
+/* Постійні клієнти */
+.clients 
+{
+  @extend %flexcenter;
+  flex-direction: column;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media (min-width: 1200px) {
+    padding-top: 94px;
+  padding-bottom: 94px;
+  }
+
+  &__wrapper {
+    display: flex;
+    max-width: 450px;
+    min-height: 336px;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content:space-between;
+    justify-content: space-between;
+    
+    
+
+    @media (min-width: 768px) {
+      max-width: 738px;
+      min-height: 214px;
+    }
+
+    @media (min-width: 1200px) {
+      // @extend %flexcenter;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      // justify-content: space-between;
+      max-width: 1200px;
+      min-height: 92px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    line-height: 1.167;
+    color: $dark-color-text;
+    margin-bottom: 30px;
+
+    @media (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
+  }
+
+  &__icon {
+    fill: $link-color;
+    @include transition(fill);
+  }
+
+  &__link {
+    width: 210px;
+    height: 92px;
+    @extend %flexcenter;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 1px solid $link-color;
+    border-radius: 4px;
+    @include transition(background-color);
+        
+    &:hover {
+      background-color: $light-grey-color;
+      & .clients__icon {
+        fill: $accent-color;
+      }
+    }
+    &:focus {
+      background-color: $light-grey-color;
+      outline: none;
+      & .clients__icon {
+        fill: $accent-color;
+      }
+    }
+
+    @media (min-width: 768px) {
+      width: 226px;
+      height: 92px;
+        }
+
+    @media (min-width: 1200px) {
+      width: 170px;
+      height: 92px;
+        }
+  }
+}

@@ -1,0 +1,23 @@
+// Підключаємо utils 
+@import './utils/variables';
+@import './utils/mixins';
+// @import './utils/placeholders';
+@import './utils/visually--hidden';
+// Підключаємо base
+@import './base/base';
+@import './base/container.scss';
+
+@import './components/button';
+@import './components/logo';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/socialnetworks';
+
+@import './layout/hero';
+@import './layout/header';
+@import './layout/advantages';
+@import './layout/whatwedo';
+@import './layout/team';
+@import './layout/clients';
+@import './layout/footer';
+@import './layout/portfolio';
