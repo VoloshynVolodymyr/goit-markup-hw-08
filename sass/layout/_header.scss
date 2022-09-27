@@ -1,7 +1,6 @@
 .header 
 {
   display: flex;
-
   margin: 0 auto;
   border-bottom: 1px solid #ececec;
   width: 100%;
@@ -14,13 +13,11 @@
       fill: $accent-color;
       outline: none;
     }
-    @media (min-width:1200px) {
+    @media (min-width:758px) {
       display: none;
     }
   }
-  @media (min-width:768px) {
-    height: 80px;
-  }
+  
   &__link--primery &__linktext {
     color: $accent-color;
     //  Формує підкреслення під активним посиланням хедера
@@ -34,29 +31,51 @@
       bottom: 0;
       right: 0;
       border-radius: 2px;
-      transform: translateY(28px);
+
+      transform: translateY(35px);
+      @media (min-width:1200px){
+        transform: translateY(24px);
+      }
     }
   }
   &__wrapper {
     display: flex;
-    align-items:center;
-    @media (max-width:1199px) {
+    align-items: center;
+    @media (max-width:767px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+    
+    // justify-content: flex-start;
+    @media (min-width:768px) and (max-width:1199px) {
       width: 100%;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
     }
   }
   &__flex {
     display: flex;
   }
-  &__icon {
+  &__firsticon {
     margin-right: 10px;
+    @media (min-width:1200px) {
+      width: 16px;
+      height: 12px;
+          }
+  }
+  &__secondicon {
+    margin-right: 10px;
+    @media (min-width:1200px) {
+           height: 16px;
+    }
   }
   &__contact {
     color: $mainColorText;
     display: block;
     @include transition(color);
     @include transition(fill);
+    @media  (min-width:1200px) {
+    margin-left: 30px;}
     &:hover,
     &:focus {
       color: $accent-color;
@@ -64,7 +83,16 @@
     }
   }
   &__linkflex {
-   display: none;
+    @media  (max-width:767px) {
+      display: none;
+    }
+
+    @media  (min-width:768px) {
+      display: flex;
+      // margin-left: auto;
+      // align-items: center;
+     };
+   
    @media  (min-width:1200px) {
     display: flex;
     margin-left: auto;
@@ -78,8 +106,12 @@
     padding-left: 25px;
     padding-right: 25px;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
+    line-height: 1.167;
+    @media  (min-width:1200px) {
+      font-size: 14px;
     line-height: 1.14;
+     };
     letter-spacing: 0.02em;
     color: $dark-color-text;
     @include transition(color);
@@ -90,6 +122,32 @@
   }
   &__linktext {
     position: relative;
+  }
+  @media (min-width:768px) and (max-width:1199px) {
+    height: 80px;
+    &__contacts {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 220px;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      font-weight: 500;
+    font-size: 12px;
+    line-height: 1.167;
+    @media  (min-width:1200px) {
+      font-size: 14px;
+    line-height: 1.14;
+     };
+    letter-spacing: 0.02em;
+    color: $dark-color-text;
+    @include transition(color);
+    &:hover,
+    &:focus {
+      color: $accent-color;
+    }
+  
+    }
   }
 
 

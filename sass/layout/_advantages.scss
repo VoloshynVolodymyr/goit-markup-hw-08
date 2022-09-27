@@ -10,7 +10,7 @@
   &__flex {
     display: flex;
     flex-direction: column;
-    width: 480px;
+    width: 100%;
 
     @media (min-width: 768px) {
       flex-direction: row;
