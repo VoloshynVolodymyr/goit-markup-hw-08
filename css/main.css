@@ -727,6 +727,8 @@ li {
   text-align: center;
   background-color: #2f303a;
   border-top: 1px solid #ececec;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../images/main/main-1600@2x.jpg);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../images/main/main-1600@2x.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -757,14 +759,14 @@ li {
 }
 @media (min-width: 1200px) {
   .hero {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../../mages/main/main-1600.jpg);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../../mages/main/main-1600.jpg);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../images/main/main-1600.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../images/main/main-1600.jpg);
   }
 }
 @media (min-width: 1200px) and (min-device-pixel-ratio: 2), (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 1200px) and (min-resolution: 192dpi), (min-width: 1200px) and (min-resolution: 2dppx) {
   .hero {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../../images/main/main-1600@2x.jpg);
-    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../../images/main/main-1600@2x.jpg);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url(../../images/main/main-1600@2x.jpg);
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../../images/main/main-1600@2x.jpg);
   }
 }
 @media (min-width: 1200px) {
@@ -1754,7 +1756,7 @@ li {
 }
 @media (max-width: 479px) {
   .subscribe__email {
-    min-width: 380px;
+    min-width: 320px;
   }
 }
 @media (min-width: 480px) {

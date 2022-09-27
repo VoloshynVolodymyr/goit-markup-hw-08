@@ -8,6 +8,8 @@
   text-align: center;
   background-color: $dark-color-footer;
   border-top: 1px solid #ececec;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../images/main/main-1600@2x.jpg);
 
   @media (max-width:767px) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
@@ -33,12 +35,12 @@
 
   @media (min-width:1200px) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../../../mages/main/main-1600.jpg);
+    url(../../images/main/main-1600.jpg);
   @media (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    url(../../../images/main/main-1600@2x.jpg);
+    url(../../images/main/main-1600@2x.jpg);
   }
   }
 
