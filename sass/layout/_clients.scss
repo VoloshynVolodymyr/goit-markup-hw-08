@@ -1,6 +1,5 @@
 /* Постійні клієнти */
-.clients 
-{
+.clients {
   @extend %flexcenter;
   flex-direction: column;
   padding-top: 60px;
@@ -8,20 +7,23 @@
 
   @media (min-width: 1200px) {
     padding-top: 94px;
-  padding-bottom: 94px;
+    padding-bottom: 94px;
   }
 
   &__wrapper {
     display: flex;
+
+    @media (max-width: 479px) {
+      justify-content: center;
+    }
+
     max-width: 450px;
     min-height: 336px;
     width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content:space-between;
+    align-content: space-between;
     justify-content: space-between;
-    
-    
 
     @media (min-width: 768px) {
       max-width: 738px;
@@ -59,12 +61,16 @@
     width: 210px;
     height: 92px;
     @extend %flexcenter;
+    @media (max-width: 479px) {
+      margin-bottom: 10px;
+      margin-left: 10px;
+    }
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid $link-color;
     border-radius: 4px;
     @include transition(background-color);
-        
+
     &:hover {
       background-color: $light-grey-color;
       & .clients__icon {
@@ -82,11 +88,11 @@
     @media (min-width: 768px) {
       width: 226px;
       height: 92px;
-        }
+    }
 
     @media (min-width: 1200px) {
       width: 170px;
       height: 92px;
-        }
+    }
   }
 }
