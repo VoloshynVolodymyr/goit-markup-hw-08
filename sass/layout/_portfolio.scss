@@ -29,6 +29,8 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0;
+    @media (min-width: 768px) and (max-width: 1199px) {}
+    justify-content: space-evenly;
   }
   &__image {
     width: 100%;
@@ -179,11 +181,13 @@
       }
     }
   }
+  &__link{
   @media (min-width: 768px) and (max-width: 1199px) {
   &__wrapper:first-child &__box{
     padding-bottom: 60px;
   }
 }
+  }
 }
 
 
