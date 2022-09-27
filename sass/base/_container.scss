@@ -2,13 +2,29 @@
     max-width: 480px;
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    
 
-    @media  (min-width:767px) {
-      max-width:768px;
+    @media  (min-width: 320px) and (max-width: 479px) {
+      max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    // padding-right: 0px;
+    // padding-left: 0px;
     }
 
-    @media  (min-width:1200px) {
+    @media  (min-width: 480px) {
+      
+      padding-right: 15px;
+    padding-left: 15px;
+    }
+
+    @media  (min-width: 767px) {
+      max-width:768px;
+      padding-right: 15px;
+    padding-left: 15px;
+    }
+
+    @media  (min-width: 1200px) {
       max-width: 1200px;
     }    
   }

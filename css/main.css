@@ -80,11 +80,25 @@ li {
   max-width: 480px;
   width: 100%;
   margin: 0 auto;
-  padding: 0 15px;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .container {
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 480px) {
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 @media (min-width: 767px) {
   .container {
     max-width: 768px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 @media (min-width: 1200px) {
@@ -151,6 +165,11 @@ li {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   margin-right: 88px;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .logo {
+    margin-left: 10px;
+  }
 }
 @media (min-width: 1200px) {
   .logo {
@@ -1098,6 +1117,11 @@ li {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media (min-width: 320px) and (max-width: 479px) {
+  .advantages__list {
+    width: 100%;
+  }
+}
 @media (min-width: 768px) {
   .advantages__list {
     width: 354px;
@@ -1125,8 +1149,15 @@ li {
   line-height: 1.14;
   text-transform: uppercase;
   color: #212121;
+  text-align: center;
   margin: 0 auto;
   margin-top: 30px;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .advantages__title {
+    width: 320px;
+    text-align: center;
+  }
 }
 @media (min-width: 768px) {
   .advantages__title {
@@ -1134,6 +1165,7 @@ li {
   }
 }
 .advantages__descr {
+  display: block;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
@@ -1145,6 +1177,12 @@ li {
 @media (max-width: 480px) {
   .advantages__descr {
     width: 100vw;
+  }
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .advantages__wrapper {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -1268,6 +1306,12 @@ li {
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .team__box {
+    width: calc(100% - 20px);
+    height: calc(100% - 10px);
+  }
 }
 @media (max-width: 767px) {
   .team__box:nth-child(-n+3) {
@@ -1436,8 +1480,30 @@ li {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media (min-width: 320px) and (max-width: 479px) {
+  .clients__list {
+    width: calc((100% - 20px) / 2);
+  }
+}
+@media (min-width: 480px) {
+  .clients__list {
+    width: 210px;
+  }
+}
+@media (min-width: 768px) {
+  .clients__list {
+    width: 226px;
+  }
+}
+@media (min-width: 1200px) {
+  .clients__list {
+    width: 170px;
+  }
+}
 .clients__link {
-  width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   height: 92px;
   border-radius: 50%;
   cursor: pointer;
@@ -1494,7 +1560,7 @@ li {
   display: -ms-flexbox;
   display: flex;
 }
-@media (min-width: 380px) {
+@media (min-width: 320px) {
   .footer__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1875,12 +1941,23 @@ li {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+  padding: 0 15px;
 }
 .portfolio__image {
   width: 100%;
   height: 294px;
   position: relative;
   overflow: hidden;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .portfolio__image {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .portfolio__imageoverflow {
   display: inline-block;
@@ -1951,6 +2028,14 @@ li {
 .portfolio__wrapper:hover {
   -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 808px) and (max-width: 1199px) {
+  .portfolio__wrapper {
+    width: 354px;
+  }
+  .portfolio__wrapper:nth-child(2n+1) {
+    margin-right: 40px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
   .portfolio__wrapper {
@@ -2058,6 +2143,14 @@ li {
   }
   .portfolio__sortbutton :nth-child(4) {
     margin-right: 8px;
+  }
+}
+.portfolio__link {
+  display: block;
+}
+@media (min-width: 320px) and (max-width: 479px) {
+  .portfolio__link {
+    width: 320px;
   }
 }
 @media (min-width: 768px) and (max-width: 1199px) {
