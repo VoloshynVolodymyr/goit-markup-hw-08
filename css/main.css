@@ -1061,12 +1061,16 @@ li {
   }
 }
 .advantages__svg {
-  width: 450px;
   height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
   -ms-flex-preferred-size: 246;
       flex-basis: 246;
+}
+@media (max-width: 480px) {
+  .advantages__svg {
+    width: 100vw;
+  }
 }
 @media (min-width: 768px) {
   .advantages__svg {
@@ -1137,6 +1141,11 @@ li {
   margin-top: 10px;
   color: var(--main-color-text);
   height: 72px;
+}
+@media (max-width: 480px) {
+  .advantages__descr {
+    width: 100vw;
+  }
 }
 
 /* Визначає характеристики секції "Чим ми займаємося" */
