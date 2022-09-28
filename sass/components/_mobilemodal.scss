@@ -1,10 +1,9 @@
 
 .mobilemodal {
-    
-    position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 40px;
   @include transition(transform);
   @include transition(opacity);
   opacity: 1;
@@ -12,10 +11,21 @@
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  min-width: 405px;
+  width: 100vw;
+height: 100vh;
+transform: translateX(0);
+&.is-hidden{
+  transform: translateX(-100%);
+}
+  @media  (min-width: 320px) and (max-width: 479px){
+min-width: 300px;
+min-height: 609px;
+  }
+  @media  (min-width: 320px){
+  min-width: 280px;
   min-height: 609px;
-  padding: 40px;
-  
+
+  }
   
 
   &__close {
@@ -94,7 +104,8 @@
 
   &__sociallink {
     display: flex;
-    width: 357px;
+    flex-wrap: wrap;
+      
     justify-content: space-between;
     &>li:not(:last-child) {
         border-right: 1px solid rgba(33, 33, 33, 0.2);  
@@ -107,6 +118,9 @@
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: #2196F3;
+    @media  (min-width: 320px) and (max-width: 479px){
+      padding-right: 2px;
+        }
     padding-right: 10px;
     @include transition(color);
     &:focus, 
